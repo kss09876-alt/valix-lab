@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VALIX LAB | 주식회사 밸릭스랩</title>
-<meta name="description" content="VALIX LAB(주식회사 밸릭스랩) — 이커머스 운영, 마케팅·광고 대행, 이벤트 기획을 아우르는 파트너입니다.">
+<title>VALIX LAB | 영상 콘텐츠 제작 · 밸릭스랩</title>
+<meta name="description" content="성과로 증명하는 콘텐츠 연구소 VALIX LAB. 예능·유튜브, 브랜디드·홍보 영상, AI·XR 콘텐츠의 기획부터 제작과 확산까지 함께합니다.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%231b2a4a%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22Arial%22 fill=%22white%22 text-anchor=%22middle%22>V</text></svg>">
 <style>
   :root{
@@ -173,153 +173,50 @@
     .contact-wrap{grid-template-columns:1fr; padding:32px 22px; border-radius:18px;}
     section{padding:56px 0;}
   }
+
+  section[id]{scroll-margin-top:88px;}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--accent-2);outline-offset:5px;}
+  .skip{position:absolute;left:16px;top:-80px;padding:12px;background:white;z-index:100;}.skip:focus{top:12px;}
+  .hero{background:#101b32;color:white;padding:100px 0 80px;}
+  h1.hero-title{font-size:clamp(36px,5.5vw,68px);color:white;max-width:900px;letter-spacing:-.045em;}
+  h1.hero-title em{color:#9bb9ff;}.hero-sub{color:#c1cbdf;max-width:650px;}
+  .hero .eyebrow{color:#b7ccff;background:#23375b;border-radius:4px;}
+  .hero .btn-primary{background:#9bb9ff;color:#101b32;}.hero .btn-secondary{background:transparent;border-color:#576781;color:white;}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:16px 36px;margin-top:64px;padding-top:24px;border-top:1px solid #35415a;color:#b9c5db;font-size:14px;}
+  .works{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;}
+  .work{border-top:2px solid var(--navy);padding:28px 0;}
+  .work-type{font-size:12px;letter-spacing:.09em;color:var(--accent);font-weight:800;}
+  .work h3{font-size:26px;line-height:1.4;letter-spacing:-.03em;margin:14px 0;}
+  .work p{color:var(--muted);margin:0 0 20px;}.work dl{font-size:14px;display:grid;grid-template-columns:75px 1fr;gap:8px;margin:0;}.work dt{color:var(--muted);}.work dd{margin:0;}
+  .section-note{color:var(--muted);font-size:13px;margin-top:28px;}
+  .process{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;list-style:none;padding:0;margin:36px 0 0;}.process li{border-top:1px solid var(--line);padding-top:18px;}.process strong{display:block;margin:8px 0;}.process p{font-size:14px;color:var(--muted);margin:0;}
+  .cell{background:#101b32;color:white;}.cell .section-title{color:white;font-size:48px;}.cell .kicker{color:#9bb9ff;}.cell .section-desc{color:#c1cbdf;max-width:620px;}.cell-tags{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:28px;color:#c1cbdf;}
+  .contact-item a{text-decoration:underline;text-underline-offset:4px;overflow-wrap:anywhere;}
+  @media(max-width:860px){.works{grid-template-columns:1fr;}.process{grid-template-columns:repeat(2,1fr);} .hero{padding:64px 0 48px;}.hero-meta{margin-top:40px;} .work h3{font-size:23px;}section[id]{scroll-margin-top:76px;}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition:none!important;}}
 </style>
 </head>
 <body>
-
-<header class="site">
-  <div class="wrap nav">
-    <div class="brand"><span class="mark">V</span> VALIX LAB</div>
-    <nav class="links">
-      <a href="#about">회사소개</a>
-      <a href="#services">서비스</a>
-      <a href="#news">소식</a>
-      <a href="#contact">오시는 길</a>
-    </nav>
-    <a class="nav-cta" href="#contact">문의하기</a>
-    <button class="menu-btn" aria-label="메뉴" onclick="document.getElementById('mnav').classList.toggle('open')">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <div id="mnav" style="display:none; border-top:1px solid var(--line);">
-    <div class="wrap" style="display:flex; flex-direction:column; gap:14px; padding:16px 24px; font-weight:600;">
-      <a href="#about">회사소개</a>
-      <a href="#services">서비스</a>
-      <a href="#news">소식</a>
-      <a href="#contact">오시는 길</a>
-    </div>
-  </div>
-</header>
-
-<script>
-  document.querySelector('.menu-btn').addEventListener('click', () => {
-    const m = document.getElementById('mnav');
-    m.style.display = m.style.display === 'none' ? 'block' : 'none';
-  });
-</script>
-
-<section class="hero">
-  <div class="wrap">
-    <div class="eyebrow">● 주식회사 밸릭스랩</div>
-    <h1 class="hero-title">이커머스와 마케팅을 잇는<br><em>VALIX LAB</em>입니다.</h1>
-    <p class="hero-sub">온라인 쇼핑몰 운영부터 광고·마케팅 대행, 오프라인 이벤트 기획까지 —
-      브랜드가 고객과 만나는 모든 접점을 함께 설계합니다.</p>
-    <div class="hero-actions">
-      <a href="#services" class="btn btn-primary">서비스 살펴보기</a>
-      <a href="#contact" class="btn btn-secondary">문의하기</a>
-    </div>
-    <div class="stats">
-      <div class="stat"><div class="num">2026</div><div class="lbl">설립</div></div>
-      <div class="stat"><div class="num">4+</div><div class="lbl">핵심 사업 영역</div></div>
-      <div class="stat"><div class="num">광주</div><div class="lbl">본사 소재지</div></div>
-    </div>
-  </div>
-</section>
-
-<section id="about">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">About</div>
-      <h2 class="section-title">회사소개</h2>
-      <p class="section-desc">VALIX LAB은 온라인 커머스와 마케팅, 오프라인 이벤트를 한 팀에서 설계하고 실행합니다.</p>
-    </div>
-    <div class="about-grid">
-      <div>
-        <div class="about-card">
-          <h3>우리의 방향</h3>
-          <p>
-            VALIX LAB은 인터넷 쇼핑몰 운영, 광고·마케팅 대행, 이벤트 기획을 하나의 흐름으로 연결해
-            브랜드가 필요로 하는 실행력을 제공하는 것을 목표로 합니다. 기획부터 운영, 사후 관리까지
-            분절되지 않은 파트너십을 지향합니다.
-          </p>
-        </div>
-        <div class="about-card" style="margin-top:20px;">
-          <h3>시작</h3>
-          <p>
-            VALIX LAB은 2026년 설립되어, 이커머스·마케팅·이벤트 영역에서 본격적인 사업을 시작했습니다.
-            앞으로의 성장 과정을 이 페이지의 소식 섹션을 통해 계속 전해드릴게요.
-          </p>
-        </div>
-      </div>
-      <div class="about-card">
-        <h3>회사 개요</h3>
-        <div class="about-facts">
-          <div class="fact-row"><span class="k">회사명</span><span class="v">주식회사 밸릭스랩 (VALIX LAB)</span></div>
-          <div class="fact-row"><span class="k">설립일</span><span class="v">2026년 7월 27일</span></div>
-          <div class="fact-row"><span class="k">대표자</span><span class="v">김승수</span></div>
-          <div class="fact-row"><span class="k">사업자등록번호</span><span class="v">877-86-03639</span></div>
-          <div class="fact-row"><span class="k">법인등록번호</span><span class="v">200111-0077766</span></div>
-          <div class="fact-row"><span class="k">본사</span><span class="v">광주광역시 동구 중앙로 358</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="services" style="background:var(--bg-soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">Services</div>
-      <h2 class="section-title">서비스</h2>
-      <p class="section-desc">등록된 사업 목적을 기반으로, VALIX LAB이 제공하는 핵심 서비스입니다.</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">🛒</div>
-        <h3>이커머스 운영대행</h3>
-        <p>인터넷 쇼핑몰 운영과 통신판매·전자상거래 전반을 대행하여, 브랜드가 상품과 고객 경험에만 집중할 수 있도록 돕습니다.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">📈</div>
-        <h3>마케팅·홍보 컨설팅</h3>
-        <p>브랜드의 목표와 시장 상황을 분석해 마케팅 전략을 설계하고, 실행 가능한 홍보 방안을 제안합니다.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">📢</div>
-        <h3>광고 대행 · 매체 판매</h3>
-        <p>온·오프라인 광고 매체 판매 및 중개, 광고·마케팅 대행을 통해 브랜드 메시지를 효과적으로 전달합니다.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🎪</div>
-        <h3>이벤트·행사 기획</h3>
-        <p>온·오프라인 행사와 이벤트를 기획부터 운영까지 대행하여, 브랜드와 고객이 직접 만나는 순간을 만듭니다.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="news">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">News</div>
-      <h2 class="section-title">소식</h2>
-      <p class="section-desc">VALIX LAB의 새로운 소식을 이곳에서 전해드릴게요.</p>
-    </div>
-    <div class="news-empty">
-      <div class="icon">📰</div>
-      <h3>아직 등록된 소식이 없어요</h3>
-      <p>공지사항과 뉴스가 준비되는 대로 이 섹션에 업데이트됩니다.</p>
-    </div>
-  </div>
-</section>
-
+<a class="skip" href="#main">본문 바로가기</a>
+<header class="site"><div class="wrap nav"><a class="brand" href="#main" aria-label="VALIX LAB 홈"><span class="mark">V</span> VALIX LAB</a><nav class="links" aria-label="주 메뉴"><a href="#work">포트폴리오</a><a href="#services">제작 서비스</a><a href="#about">회사소개</a><a href="#cell">THE CELL</a></nav><a class="nav-cta" href="#contact">제작 문의</a><button class="menu-btn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mnav"><span></span><span></span><span></span></button></div><nav id="mnav" aria-label="모바일 메뉴" hidden style="border-top:1px solid var(--line)"><div class="wrap" style="display:flex;flex-direction:column;gap:14px;padding:16px 24px;font-weight:600"><a href="#work">포트폴리오</a><a href="#services">제작 서비스</a><a href="#about">회사소개</a><a href="#cell">THE CELL</a><a href="#contact">제작 문의</a></div></nav></header>
+<main id="main">
+<section class="hero"><div class="wrap"><div class="eyebrow">CONTENT PRODUCTION STUDIO</div><h1 class="hero-title">성과로 증명하는<br>콘텐츠 연구소<br><em>VALIX LAB</em></h1><p class="hero-sub">예능과 드라마, 브랜드 영상부터 AI 콘텐츠까지.<br>밸릭스랩은 기획부터 제작, 브랜딩과 확산까지 함께합니다.</p><div class="hero-actions"><a class="btn btn-primary" href="#work">포트폴리오 보기</a><a class="btn btn-secondary" href="#contact">제작 문의</a></div><div class="hero-meta"><span>예능 · 유튜브</span><span>브랜디드 · 홍보 영상</span><span>AI · XR · 숏폼 드라마</span></div></div></section>
+<section id="work"><div class="wrap"><div class="section-head"><div class="kicker">Selected Work</div><h2 class="section-title">콘텐츠로 보여주는 제작 경험</h2><p class="section-desc">방송 IP의 디지털 확장부터 브랜드의 이야기를 담은 영상까지, 프로젝트에 맞는 포맷을 기획하고 제작합니다.</p></div><div class="works">
+<article class="work"><div class="work-type">01 / DIGITAL & VIRAL</div><h3>MBC 아이돌 라디오<br>바이럴 콘텐츠</h3><p>프로그램의 톤과 출연자의 매력을 살려 온라인 확산에 적합한 짧은 포맷으로 재구성했습니다.</p><dl><dt>제작 분야</dt><dd>방송 IP · 디지털 콘텐츠</dd><dt>담당 역할</dt><dd>바이럴 영상 기획 · 제작</dd></dl></article>
+<article class="work"><div class="work-type">02 / CULTURE & BRAND</div><h3>가우디 전시<br>류승룡 도슨트 콘텐츠</h3><p>도슨트의 전달력과 전시 현장의 경험을 중심으로 문화 콘텐츠의 이야기를 구성했습니다.</p><dl><dt>제작 분야</dt><dd>문화 · 전시 브랜디드 콘텐츠</dd><dt>담당 역할</dt><dd>콘텐츠 기획 · 제작</dd></dl></article>
+<article class="work"><div class="work-type">03 / BRANDED ENTERTAINMENT</div><h3>신기루의 육식당<br>데프콘의 육식당</h3><p>연예인의 캐릭터와 음식 소재를 결합해 IBK기업은행의 브랜드 메시지를 예능형 콘텐츠로 전달했습니다.</p><dl><dt>제작 분야</dt><dd>브랜디드 예능</dd><dt>담당 역할</dt><dd>대표자 프리랜서 PD · 콘텐츠 제작</dd></dl></article>
+<article class="work"><div class="work-type">04 / BROADCAST PROMOTION</div><h3>KBS 〈태종 이방원〉<br>홍보 콘텐츠</h3><p>드라마의 인물과 에피소드를 온라인에서 접하기 쉬운 디지털 홍보 포맷으로 재구성했습니다.</p><dl><dt>제작 분야</dt><dd>방송 프로그램 · 디지털 홍보</dd><dt>담당 역할</dt><dd>홍보 콘텐츠 제작</dd></dl></article>
+</div><p class="section-note">대표자의 방송사 재직 및 프리랜서 활동 중 참여 이력을 포함합니다. 프로젝트별 담당 역할을 함께 표기했습니다.</p></div></section>
+<section id="services" style="background:var(--bg-soft)"><div class="wrap"><div class="section-head"><div class="kicker">What We Do</div><h2 class="section-title">기획부터 확산까지</h2><p class="section-desc">전달할 메시지와 시청할 사람을 먼저 생각하고, 플랫폼에 맞는 콘텐츠를 만듭니다.</p></div><div class="services-grid"><article class="service-card"><div class="kicker">01 / Entertainment</div><h3>예능 · 유튜브 콘텐츠</h3><p>출연자의 캐릭터와 소재를 살린 예능 포맷, 유튜브 시리즈와 디지털 콘텐츠를 기획하고 제작합니다.</p></article><article class="service-card"><div class="kicker">02 / Branded Content</div><h3>브랜디드 · 홍보 영상</h3><p>기업과 기관, 문화·전시의 이야기를 시청자가 관심을 가질 수 있는 영상으로 풀어냅니다.</p></article><article class="service-card"><div class="kicker">03 / AI & XR</div><h3>AI · XR · 숏폼 드라마</h3><p>AI 영상 제작과 XR을 활용해 프로젝트의 목적에 맞는 새로운 표현과 스토리텔링을 구현합니다.</p></article><article class="service-card"><div class="kicker">04 / Branding & Marketing</div><h3>콘텐츠 브랜딩 · 확산</h3><p>타이틀과 썸네일, 콘텐츠 패키징부터 업로드와 확산, 결과 리포트까지 프로젝트 단위로 설계합니다.</p></article></div><ol class="process"><li><span class="kicker">01</span><strong>상담 · 계약</strong><p>요청 사항과 제작 범위 확인</p></li><li><span class="kicker">02</span><strong>기획</strong><p>기획안 · 구성 · 대본 설계</p></li><li><span class="kicker">03</span><strong>제작</strong><p>촬영 · 편집 · AI 제작</p></li><li><span class="kicker">04</span><strong>브랜딩 · 확산</strong><p>패키징 · 업로드 · 리포트</p></li></ol></div></section>
+<section id="about"><div class="wrap"><div class="section-head"><div class="kicker">About VALIX LAB</div><h2 class="section-title">가치를 확장하는 콘텐츠 랩</h2><p class="section-desc">VALIX는 VALUE와 X의 조합입니다. 콘텐츠와 공간을 실험하고, 사람들의 반응과 성과로 검증합니다.</p></div><div class="about-grid"><div><div class="about-card"><h3>방송 제작 경험을 콘텐츠에 담습니다</h3><p>김승수 대표는 연세대학교 언론홍보영상학부를 졸업하고 채널A 공채 12기 PD로 활동했습니다. 방송 예능에서 유튜브와 브랜드 콘텐츠, AI·XR 숏폼까지 이어진 제작 경험을 바탕으로 프로젝트를 설계합니다.</p></div><div class="about-card" style="margin-top:20px"><h3>분야별 파트너와 함께 완성합니다</h3><p>미술 기획, 음악·믹싱, XR 분야의 실행 파트너와 협업해 콘텐츠에 필요한 전문성을 연결합니다.</p></div></div><div class="about-card"><h3>회사 개요</h3><div class="about-facts"><div class="fact-row"><span class="k">회사명</span><span class="v">주식회사 밸릭스랩</span></div><div class="fact-row"><span class="k">설립일</span><span class="v">2026년 7월 27일</span></div><div class="fact-row"><span class="k">대표자</span><span class="v">김승수</span></div><div class="fact-row"><span class="k">사업 분야</span><span class="v">영상 콘텐츠 제작<br>공간 미디어</span></div></div></div></div></div></section>
+<section id="cell" class="cell"><div class="wrap"><div class="kicker">New Business / Space Media</div><h2 class="section-title">THE CELL</h2><p style="font-size:24px;margin:0 0 20px">Content beyond the screen.</p><p class="section-desc">화면 속 콘텐츠를 오프라인 공간의 경험으로 확장합니다. 정육면체 착시 오브제와 라이브 퍼포먼스를 결합한 미디어 경험 사업을 추진합니다.</p><div class="cell-tags"><span>미디어아트 큐브</span><span>디지털 사이니지</span><span>라이브 이벤트</span></div></div></section>
 <section id="contact" style="padding-bottom:96px;">
   <div class="wrap">
     <div class="contact-wrap">
       <div>
-        <h2>오시는 길 · 문의</h2>
-        <p class="section-desc-inv">VALIX LAB에 궁금한 점이 있으신가요? 아래 정보로 편하게 연락해 주세요.</p>
-        <div class="contact-list">
+        <h2>프로젝트를 함께 시작해요</h2>
+        <p class="section-desc-inv">만들고 싶은 콘텐츠와 일정, 예산을 알려주세요. 프로젝트에 맞는 제작 방향을 함께 논의합니다.</p>
+        <div class="contact-list"><div class="contact-item"><div><div class="t">Email</div><div class="d"><a href="mailto:winwtr@valixlab.com">winwtr@valixlab.com</a></div></div></div><div class="contact-item"><div><div class="t">Phone</div><div class="d"><a href="tel:+821025594190">010-2559-4190</a></div></div></div>
           <div class="contact-item">
             <div class="ico">📍</div>
             <div>
@@ -344,7 +241,7 @@
         </div>
       </div>
       <div class="map-frame">
-        <iframe
+        <iframe title="밸릭스랩 오시는 길 지도"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
           src="https://maps.google.com/maps?q=%EA%B4%91%EC%A3%BC%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%8F%99%EA%B5%AC%20%EC%A4%91%EC%95%99%EB%A1%9C%20358&output=embed">
@@ -354,7 +251,7 @@
   </div>
 </section>
 
-<footer>
+</main><footer>
   <div class="wrap footer-grid">
     <div>
       <div class="footer-brand">VALIX LAB</div>
@@ -368,5 +265,10 @@
   </div>
 </footer>
 
-</body>
-</html>
+
+<script>
+const menuButton=document.querySelector('.menu-btn');const mobileNav=document.getElementById('mnav');
+function closeMenu(){mobileNav.hidden=true;menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','메뉴 열기');}
+menuButton.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')!=='true';mobileNav.hidden=!open;menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'메뉴 닫기':'메뉴 열기');});
+mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});window.matchMedia('(min-width:861px)').addEventListener('change',e=>{if(e.matches)closeMenu();});
+</script></body></html>
