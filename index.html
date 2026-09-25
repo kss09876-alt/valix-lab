@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VALIX LAB | 주식회사 밸릭스랩</title>
+<meta name="description" content="VALIX LAB(주식회사 밸릭스랩) — 이커머스 운영, 마케팅·광고 대행, 이벤트 기획을 아우르는 파트너입니다.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%231b2a4a%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22Arial%22 fill=%22white%22 text-anchor=%22middle%22>V</text></svg>">
+<style>
+  :root{
+    --navy:#152342;
+    --navy-2:#1e3a66;
+    --accent:#3b6ef6;
+    --accent-2:#7aa2ff;
+    --ink:#16192a;
+    --muted:#5b6478;
+    --line:#e7e9f0;
+    --bg:#ffffff;
+    --bg-soft:#f6f7fb;
+    --radius:16px;
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",-apple-system,BlinkMacSystemFont,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+
+  header.site{
+    position:sticky; top:0; z-index:50;
+    background:rgba(255,255,255,0.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 0;
+  }
+  .brand{display:flex; align-items:center; gap:10px; font-weight:800; font-size:19px; letter-spacing:-0.02em;}
+  .brand .mark{
+    width:32px;height:32px;border-radius:9px;
+    background:linear-gradient(135deg,var(--navy),var(--accent));
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-weight:800;font-size:16px;
+  }
+  nav.links{display:flex; gap:28px; font-size:15px; font-weight:600; color:var(--navy);}
+  nav.links a{opacity:0.75; transition:opacity .15s;}
+  nav.links a:hover{opacity:1;}
+  .nav-cta{
+    background:var(--navy); color:#fff; padding:10px 18px; border-radius:999px;
+    font-size:14px; font-weight:700; white-space:nowrap;
+  }
+  .menu-btn{display:none; background:none; border:none; cursor:pointer; padding:6px;}
+  .menu-btn span{display:block; width:22px; height:2px; background:var(--navy); margin:5px 0; border-radius:2px;}
+
+  .hero{
+    background:
+      radial-gradient(1000px 500px at 85% -10%, rgba(59,110,246,0.16), transparent 60%),
+      linear-gradient(180deg,#fbfcff, #ffffff);
+    padding:96px 0 88px;
+    border-bottom:1px solid var(--line);
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:13px; font-weight:700; color:var(--accent);
+    background:rgba(59,110,246,0.09); padding:7px 14px; border-radius:999px;
+    margin-bottom:22px;
+  }
+  h1.hero-title{
+    font-size:44px; line-height:1.28; letter-spacing:-0.02em; font-weight:800;
+    color:var(--navy); margin:0 0 20px; max-width:720px;
+  }
+  h1.hero-title em{color:var(--accent); font-style:normal;}
+  .hero-sub{font-size:18px; color:var(--muted); max-width:560px; margin:0 0 34px;}
+  .hero-actions{display:flex; gap:12px; flex-wrap:wrap;}
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding:14px 26px; border-radius:12px; font-weight:700; font-size:15px;
+    border:1px solid transparent; cursor:pointer;
+  }
+  .btn-primary{background:var(--navy); color:#fff;}
+  .btn-secondary{background:#fff; color:var(--navy); border-color:var(--line);}
+
+  .stats{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
+    background:var(--line); border:1px solid var(--line); border-radius:var(--radius);
+    overflow:hidden; margin-top:64px;
+  }
+  .stat{background:#fff; padding:26px 22px;}
+  .stat .num{font-size:26px; font-weight:800; color:var(--navy); letter-spacing:-0.02em;}
+  .stat .lbl{font-size:13.5px; color:var(--muted); margin-top:4px;}
+
+  section{padding:88px 0;}
+  .section-head{max-width:600px; margin:0 0 48px;}
+  .kicker{font-size:13px; font-weight:800; color:var(--accent); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:10px;}
+  h2.section-title{font-size:32px; font-weight:800; color:var(--navy); letter-spacing:-0.02em; margin:0 0 14px;}
+  .section-desc{color:var(--muted); font-size:16px;}
+
+  .about-grid{display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:start;}
+  .about-card{
+    background:var(--bg-soft); border:1px solid var(--line); border-radius:var(--radius);
+    padding:32px;
+  }
+  .about-card h3{margin:0 0 10px; font-size:17px; color:var(--navy);}
+  .about-card p{margin:0; color:var(--muted); font-size:15px;}
+  .about-facts{display:grid; gap:16px; margin-top:24px;}
+  .fact-row{display:flex; justify-content:space-between; gap:16px; padding:14px 0; border-top:1px solid var(--line); font-size:14.5px;}
+  .fact-row:first-child{border-top:none;}
+  .fact-row .k{color:var(--muted); font-weight:600;}
+  .fact-row .v{color:var(--ink); font-weight:700; text-align:right;}
+
+  .services-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:20px;}
+  .service-card{
+    border:1px solid var(--line); border-radius:var(--radius); padding:28px;
+    background:#fff; transition:box-shadow .2s, transform .2s;
+  }
+  .service-card:hover{box-shadow:0 14px 34px rgba(21,35,66,0.08); transform:translateY(-2px);}
+  .service-icon{
+    width:44px;height:44px;border-radius:12px; background:linear-gradient(135deg,var(--navy),var(--accent));
+    display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:18px;
+    margin-bottom:16px;
+  }
+  .service-card h3{margin:0 0 8px; font-size:18px; color:var(--navy);}
+  .service-card p{margin:0; color:var(--muted); font-size:14.5px;}
+
+  .news-empty{
+    border:1px dashed var(--line); border-radius:var(--radius);
+    padding:56px 32px; text-align:center; background:var(--bg-soft);
+  }
+  .news-empty .icon{font-size:30px; margin-bottom:14px;}
+  .news-empty h3{margin:0 0 8px; color:var(--navy); font-size:17px;}
+  .news-empty p{margin:0; color:var(--muted); font-size:14.5px;}
+
+  .contact-wrap{
+    background:var(--navy); border-radius:24px; padding:56px; color:#fff;
+    display:grid; grid-template-columns:1fr 1fr; gap:40px;
+  }
+  .contact-wrap h2{margin:0 0 12px; font-size:28px; font-weight:800;}
+  .contact-wrap .section-desc-inv{color:rgba(255,255,255,0.7); font-size:15px; margin-bottom:28px;}
+  .contact-list{display:grid; gap:18px;}
+  .contact-item{display:flex; gap:14px; align-items:flex-start;}
+  .contact-item .ico{
+    width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.12);
+    display:flex;align-items:center;justify-content:center; flex-shrink:0; font-size:16px;
+  }
+  .contact-item .t{font-size:12.5px; color:rgba(255,255,255,0.55); font-weight:700; text-transform:uppercase; letter-spacing:0.04em;}
+  .contact-item .d{font-size:15px; font-weight:600; margin-top:2px;}
+  .map-frame{border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,0.14); min-height:280px;}
+  .map-frame iframe{width:100%; height:100%; min-height:280px; border:0; display:block;}
+
+  footer{border-top:1px solid var(--line); padding:36px 0; margin-top:20px;}
+  .footer-grid{display:flex; justify-content:space-between; align-items:flex-start; gap:24px; flex-wrap:wrap;}
+  .footer-brand{font-weight:800; color:var(--navy); margin-bottom:8px;}
+  .footer-legal{color:var(--muted); font-size:12.5px; line-height:1.9;}
+  .footer-copy{color:var(--muted); font-size:12.5px;}
+
+  @media (max-width:860px){
+    nav.links, .nav-cta{display:none;}
+    .menu-btn{display:block;}
+    h1.hero-title{font-size:32px;}
+    .hero{padding:64px 0 56px;}
+    .stats{grid-template-columns:1fr; margin-top:40px;}
+    .about-grid{grid-template-columns:1fr; gap:32px;}
+    .services-grid{grid-template-columns:1fr;}
+    .contact-wrap{grid-template-columns:1fr; padding:32px 22px; border-radius:18px;}
+    section{padding:56px 0;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <div class="brand"><span class="mark">V</span> VALIX LAB</div>
+    <nav class="links">
+      <a href="#about">회사소개</a>
+      <a href="#services">서비스</a>
+      <a href="#news">소식</a>
+      <a href="#contact">오시는 길</a>
+    </nav>
+    <a class="nav-cta" href="#contact">문의하기</a>
+    <button class="menu-btn" aria-label="메뉴" onclick="document.getElementById('mnav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div id="mnav" style="display:none; border-top:1px solid var(--line);">
+    <div class="wrap" style="display:flex; flex-direction:column; gap:14px; padding:16px 24px; font-weight:600;">
+      <a href="#about">회사소개</a>
+      <a href="#services">서비스</a>
+      <a href="#news">소식</a>
+      <a href="#contact">오시는 길</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  document.querySelector('.menu-btn').addEventListener('click', () => {
+    const m = document.getElementById('mnav');
+    m.style.display = m.style.display === 'none' ? 'block' : 'none';
+  });
+</script>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">● 주식회사 밸릭스랩</div>
+    <h1 class="hero-title">이커머스와 마케팅을 잇는<br><em>VALIX LAB</em>입니다.</h1>
+    <p class="hero-sub">온라인 쇼핑몰 운영부터 광고·마케팅 대행, 오프라인 이벤트 기획까지 —
+      브랜드가 고객과 만나는 모든 접점을 함께 설계합니다.</p>
+    <div class="hero-actions">
+      <a href="#services" class="btn btn-primary">서비스 살펴보기</a>
+      <a href="#contact" class="btn btn-secondary">문의하기</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="num">2026</div><div class="lbl">설립</div></div>
+      <div class="stat"><div class="num">4+</div><div class="lbl">핵심 사업 영역</div></div>
+      <div class="stat"><div class="num">광주</div><div class="lbl">본사 소재지</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">About</div>
+      <h2 class="section-title">회사소개</h2>
+      <p class="section-desc">VALIX LAB은 온라인 커머스와 마케팅, 오프라인 이벤트를 한 팀에서 설계하고 실행합니다.</p>
+    </div>
+    <div class="about-grid">
+      <div>
+        <div class="about-card">
+          <h3>우리의 방향</h3>
+          <p>
+            VALIX LAB은 인터넷 쇼핑몰 운영, 광고·마케팅 대행, 이벤트 기획을 하나의 흐름으로 연결해
+            브랜드가 필요로 하는 실행력을 제공하는 것을 목표로 합니다. 기획부터 운영, 사후 관리까지
+            분절되지 않은 파트너십을 지향합니다.
+          </p>
+        </div>
+        <div class="about-card" style="margin-top:20px;">
+          <h3>시작</h3>
+          <p>
+            VALIX LAB은 2026년 설립되어, 이커머스·마케팅·이벤트 영역에서 본격적인 사업을 시작했습니다.
+            앞으로의 성장 과정을 이 페이지의 소식 섹션을 통해 계속 전해드릴게요.
+          </p>
+        </div>
+      </div>
+      <div class="about-card">
+        <h3>회사 개요</h3>
+        <div class="about-facts">
+          <div class="fact-row"><span class="k">회사명</span><span class="v">주식회사 밸릭스랩 (VALIX LAB)</span></div>
+          <div class="fact-row"><span class="k">설립일</span><span class="v">2026년 7월 27일</span></div>
+          <div class="fact-row"><span class="k">대표자</span><span class="v">김승수</span></div>
+          <div class="fact-row"><span class="k">사업자등록번호</span><span class="v">877-86-03639</span></div>
+          <div class="fact-row"><span class="k">법인등록번호</span><span class="v">200111-0077766</span></div>
+          <div class="fact-row"><span class="k">본사</span><span class="v">광주광역시 동구 중앙로 358</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" style="background:var(--bg-soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Services</div>
+      <h2 class="section-title">서비스</h2>
+      <p class="section-desc">등록된 사업 목적을 기반으로, VALIX LAB이 제공하는 핵심 서비스입니다.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🛒</div>
+        <h3>이커머스 운영대행</h3>
+        <p>인터넷 쇼핑몰 운영과 통신판매·전자상거래 전반을 대행하여, 브랜드가 상품과 고객 경험에만 집중할 수 있도록 돕습니다.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📈</div>
+        <h3>마케팅·홍보 컨설팅</h3>
+        <p>브랜드의 목표와 시장 상황을 분석해 마케팅 전략을 설계하고, 실행 가능한 홍보 방안을 제안합니다.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📢</div>
+        <h3>광고 대행 · 매체 판매</h3>
+        <p>온·오프라인 광고 매체 판매 및 중개, 광고·마케팅 대행을 통해 브랜드 메시지를 효과적으로 전달합니다.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🎪</div>
+        <h3>이벤트·행사 기획</h3>
+        <p>온·오프라인 행사와 이벤트를 기획부터 운영까지 대행하여, 브랜드와 고객이 직접 만나는 순간을 만듭니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="news">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">News</div>
+      <h2 class="section-title">소식</h2>
+      <p class="section-desc">VALIX LAB의 새로운 소식을 이곳에서 전해드릴게요.</p>
+    </div>
+    <div class="news-empty">
+      <div class="icon">📰</div>
+      <h3>아직 등록된 소식이 없어요</h3>
+      <p>공지사항과 뉴스가 준비되는 대로 이 섹션에 업데이트됩니다.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-bottom:96px;">
+  <div class="wrap">
+    <div class="contact-wrap">
+      <div>
+        <h2>오시는 길 · 문의</h2>
+        <p class="section-desc-inv">VALIX LAB에 궁금한 점이 있으신가요? 아래 정보로 편하게 연락해 주세요.</p>
+        <div class="contact-list">
+          <div class="contact-item">
+            <div class="ico">📍</div>
+            <div>
+              <div class="t">주소</div>
+              <div class="d">전남광주통합특별시 동구 중앙로 358, 2층 292-13호<br>(계림동, 금호계림 주상복합)</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="ico">🏢</div>
+            <div>
+              <div class="t">회사명</div>
+              <div class="d">주식회사 밸릭스랩 (VALIX LAB)</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="ico">🪪</div>
+            <div>
+              <div class="t">사업자등록번호</div>
+              <div class="d">877-86-03639</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="map-frame">
+        <iframe
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=%EA%B4%91%EC%A3%BC%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%8F%99%EA%B5%AC%20%EC%A4%91%EC%95%99%EB%A1%9C%20358&output=embed">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div>
+      <div class="footer-brand">VALIX LAB</div>
+      <div class="footer-legal">
+        주식회사 밸릭스랩 · 대표 김승수<br>
+        사업자등록번호 877-86-03639 · 법인등록번호 200111-0077766<br>
+        전남광주통합특별시 동구 중앙로 358, 2층 292-13호(계림동, 금호계림 주상복합)
+      </div>
+    </div>
+    <div class="footer-copy">© 2026 VALIX LAB. All rights reserved.</div>
+  </div>
+</footer>
+
+</body>
+</html>
