@@ -120,6 +120,13 @@
   .client-showcase p{margin:0 0 20px; color:var(--muted); font-size:14px;}
   .client-logo-scroll{overflow-x:auto; border-radius:18px; background:#050505; padding:24px 28px; scrollbar-width:thin;}
   .client-logo-scroll img{display:block; width:100%; min-width:960px; height:auto;}
+  .partner-showcase{margin-top:36px; padding-top:32px; border-top:1px solid var(--line);}
+  .partner-showcase h3{margin:8px 0 8px; font-size:24px; color:var(--navy);}
+  .partner-showcase>p{margin:0 0 20px; color:var(--muted); font-size:14px;}
+  .partner-grid{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:12px;}
+  .partner-logo{height:128px; display:flex; align-items:center; justify-content:center; padding:20px; border:1px solid var(--line); border-radius:16px; background:#fff; overflow:hidden;}
+  .partner-logo img{display:block; max-width:100%; max-height:88px; width:auto; height:auto; object-fit:contain;}
+  .partner-text-logo{font-size:18px; font-weight:900; letter-spacing:-.04em; color:var(--navy); text-align:center;}
   .fact-row{display:flex; justify-content:space-between; gap:16px; padding:14px 0; border-top:1px solid var(--line); font-size:14.5px;}
   .fact-row:first-child{border-top:none;}
   .fact-row .k{color:var(--muted); font-weight:600;}
@@ -179,6 +186,9 @@
     .about-grid{grid-template-columns:1fr; gap:32px;}
     .client-showcase{margin-top:28px; padding-top:28px;}
     .client-logo-scroll{padding:20px; border-radius:14px;}
+    .partner-showcase{margin-top:28px; padding-top:28px;}
+    .partner-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+    .partner-logo{height:112px; padding:16px;}
     .services-grid{grid-template-columns:1fr;}
     .contact-wrap{grid-template-columns:1fr; padding:32px 22px; border-radius:18px;}
     section{padding:56px 0;}
@@ -735,6 +745,18 @@
 <p>방송, 금융, 문화·전시 분야의 다양한 프로젝트를 함께했습니다.</p>
 <div class="client-logo-scroll" role="region" aria-label="함께 작업한 회사 로고" tabindex="0">
 <img src="selected-clients.png" width="1680" height="90" alt="MBC, 채널A, KBS, IBK기업은행, Boom Bebe, 가우디서울">
+</div>
+</div>
+<div class="partner-showcase">
+<div class="kicker">Production Partners</div>
+<h3>함께 만드는 협력사</h3>
+<p>프로젝트의 기획과 제작, 전문 실행을 함께하는 파트너입니다.</p>
+<div class="partner-grid" aria-label="밸릭스랩 협력사">
+<div class="partner-logo"><img src="partner-community-value.png" alt="Community Value ESG Consulting Platform"></div>
+<div class="partner-logo"><img src="partner-ples.png" alt="PL=S"></div>
+<div class="partner-logo"><img src="partner-artverse.png" alt="ART VERSE"></div>
+<div class="partner-logo"><img src="partner-zzi-group.png" alt="ZZI group"></div>
+<div class="partner-logo partner-text-logo">(주)수퍼파워</div>
 </div>
 </div>
 </div>
